@@ -1,0 +1,23 @@
+References:
+
+1. Basic explanation and introduction to time series analysis
+
+	https://www.youtube.com/watch?v=e8Yw4alG16Q (by youtube channel edureka!)
+
+2. Differencing data
+
+	https://www.youtube.com/watch?v=1c_QpeLlcjg (by youtube channel Unfold Data Science)
+
+3. More explanation of ARIMA method
+
+	https://www.youtube.com/watch?v=8FCDpFhd1zk (by youtube channel Nachiketa Hebbar)
+
+	https://www.youtube.com/watch?v=-aCF0_wfVwY (by youtube channel Lianne and Justin)
+
+4. Convert machine learning model to pickle file
+	
+	https://www.youtube.com/watch?v=lK0aVny0Rsw
+
+5. Deploying machine learning model on front end
+
+	https://www.youtube.com/watch?v=Pc8WdnIdXZg (by youtube channel Nachiketa Hebbar)
