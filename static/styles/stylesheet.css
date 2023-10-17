@@ -1,0 +1,34 @@
+h1{
+	text-align:center;
+}
+
+table{
+	border-style:solid;
+}
+
+.formInput {
+	width:100%;
+	border-style:solid;
+}
+
+.tableMain {
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#th2 {
+	margin-left:0;
+}
+
+.tableValue {
+	text-align: center; 
+    vertical-align: middle;
+	border-style:solid;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main{
+	text-align:center;
+}

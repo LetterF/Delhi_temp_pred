@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylesheet.css') }}">
+<title>Delhi Temperature Climate Prediction</title>
+</head>
+
+<body>
+
+<h1>Delhi Temperature Climate Prediction</h1>
+<form action="/predict" class="main" method="get">
+	<table class="tableMain">
+		<tr class="">
+		<th id="th1" ><label class="" for="month">Month:</label><th>
+		<th id="th2" ><label class="" for="year">Year:</label></th>
+		</tr>
+		<tr class="">
+		<td headers="th1" class=""><input class="formInput" type="text" id="month" name="month"></th>
+		<td headers="th2" class=""><input class="formInput" type="text" id="year" name="year"></th>
+		</tr>
+	</table>
+	<input type="submit">
+</form>
+<br>
+<br>
+<p>
+{{result}}
+</p>
+
+</body>
+
+</html>
