@@ -3,7 +3,16 @@ import pickle
 import numpy as np
 app = Flask(__name__)
 
-model=pickle.load(open("predModel.pkl", "rb"))
+model=pickle.load(open("regression.pkl", "rb"))
+
+def averageTemperature_pred(month, year=2018):
+    start = 48
+    end = start + (year-2017)*12 + (month-1)
+
+    pred=model.predict(start=start, end=end)
+    conf_int=model.get_prediction(start=start, end=end).conf_int()
+    
+    return [pred[-1],conf_int["lower meantemp"][-1],conf_int["upper meantemp"][-1]]
 @app.route("/")
 
 def homePage():
@@ -11,9 +20,9 @@ def homePage():
 
 @app.route("/predict", methods=["POST", "GET"])
 def predict():
-  print(request.form)
   int_features=[int(x) for x in request.form.values()]
   final=[np.array(int_features)]
-  print(int_features)
-  print(final)
-  prediction=model.predict()
+  prediction=averageTemperature_pred(1)
+  
+
+if __name__ == "__main__":
