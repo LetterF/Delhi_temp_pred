@@ -7,23 +7,23 @@
 
 <body>
 
-<h1 class="center">Delhi Temperature Climate Prediction</h1>
+<h1 id="title-text" class="center">Delhi Temperature Climate Prediction</h1>
 <form action="/predict" class="main" method="get">
 	<table class="tableMain">
 		<tr class="">
-		<th id="th1" ><label class="" for="month">Month:</label><th>
-		<th id="th2" ><label class="" for="year">Year:</label></th>
+		<th id="th1" class=""><label class="form-text" for="month">Month:</label></th>
+		<th id="th2" class=""><label class="form-text" for="year">Year:</label></th>
 		</tr>
 		<tr class="">
-		<td headers="th1" class=""><input class="formInput" type="text" id="month" name="month"></th>
-		<td headers="th2" class=""><input class="formInput" type="text" id="year" name="year"></th>
+		<td headers="th1" class=""><input placeholder="8" class="formInput" type="text" id="month" name="month"></th>
+		<td headers="th2" class=""><input placeholder="2018" class="formInput" type="text" id="year" name="year"></th>
 		</tr>
 	</table>
-	<input type="submit">
+	<button type="submit" class="button"><b>Predict Temperature</b></button>
 </form>
 <br>
 <br>
-<p class="center">
+<p id="predicted" class="center">
 {{result}}
 </p>
 
