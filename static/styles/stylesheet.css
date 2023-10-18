@@ -1,15 +1,9 @@
-h1{
+.center {
 	text-align:center;
 }
 
-table{
-	border-style:solid;
-}
 
-.formInput {
-	width:100%;
-	border-style:solid;
-}
+
 
 .tableMain {
 	margin-left: auto;

@@ -25,14 +25,18 @@ def homePage():
 def predict():
   int_features=[int(x) for x in request.form.values()]
   final=[np.array(int_features)]
-  month = int(request.values.get("month"))
-  year = int(request.values.get("year"))
-  if month is None:
-            month = "Not Submitted"
-            return month
-  if year is None:
-            year = "Not Submitted"
-            return year
+  month = request.values.get("month")
+  year = request.values.get("year")
+  if(len(month) == 0 or len(year)== 0):
+            return render_template("index.html",result="Form cannot be empty")
+  if (not month.isdigit() or not year.isdigit()):
+            return render_template("index.html",result="Month and Year should be filled with integers")
+  else:
+        if int(year) < 2017:
+            return render_template("index.html",result="year can't be less than 2017")
+  month = int(month)
+  year = int(year)
+    
   prediction=averageTemperature_pred(month, year)
   
   return render_template("index.html",result=(f"The average temperature in Delhi on {month} of {year} is {prediction[0]} \n with upper confidence interval of {prediction[2]} \n and lower confidence interval of {prediction[1]}"))
